@@ -1,0 +1,34 @@
+// Last updated: 8/5/2025, 10:12:26 PM
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    int totalTilt=0;
+    public int findTilt(TreeNode root) {
+        postorder(root);
+        return  totalTilt;
+    }
+
+    public int postorder(TreeNode root){
+        if(root==null) return 0;
+
+        int left=postorder(root.left);
+        int right=postorder(root.right);
+        int tilt=Math.abs(left-right);
+        totalTilt+=tilt;
+
+        return root.val+left+right;
+    }
+}
