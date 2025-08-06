@@ -1,4 +1,4 @@
-# 🧠 Java DSA Practice Repository
+#  Java DSA Practice Repository
 
 Welcome to my repository where I'm solving **Data Structures and Algorithms (DSA)** problems using **Java**. This project is part of my consistent effort to improve my problem-solving skills and strengthen my understanding of core computer science concepts.
 
